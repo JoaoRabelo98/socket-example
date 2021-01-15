@@ -11,11 +11,11 @@ app.post('/', (req, res) => {
     res.send('Mensagem enviada a todos os seres');
 });
 
-io.on('connection', function(socket){
+io.on('connection',(socket) => {
     console.log('um novo ser se conectou');
 });
 
-http.listen(8000, 'localhost', function(){
+http.listen(8000, 'localhost', () => {
   console.log('listening socket on port 8000');
 });
 
